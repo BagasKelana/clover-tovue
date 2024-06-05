@@ -1,102 +1,33 @@
 <template>
-  <v-app>
-    <v-navigation-drawer
-    
-      v-model="drawer"
-      :rail="rail"
-      permanent
-      @click="rail = false"
-      variant="elevated"
-      theme="dark"
-    >
-      <v-list-item class="pa-3" nav>
-        <template v-slot:prepend>
-          <div class="d-flex align-center ga-6">
-            <v-icon size="x-large" icon="mdi-clover"></v-icon>
-            <div class="text-center font-weight-bold text-subtitle-1">
-              TOVUE
-            </div>
-          </div>
-        </template>
-        <template v-slot:append>
-          <v-btn
-            @click.stop="rail = !rail"
-            icon="mdi-chevron-left"
-            variant="text"
-          />
-        </template>
-      </v-list-item>
+  <v-card>
+    <SideBar :openBar="openBar" />
 
-      <v-divider :thickness="1"></v-divider>
-
-      <v-list class="mt-2" nav>
-        <v-list-item
-          prepend-icon="mdi-format-list-bulleted"
-          title="All Task"
-          value="myfiles"
-        ></v-list-item>
-
-        <v-list-item
-          prepend-icon="mdi-star"
-          title="Important"
-          value="starred"
-        ></v-list-item>
-        <v-list-item
-          prepend-icon="mdi-calendar-today"
-          title="Today"
-          value="starred"
-        ></v-list-item>
-
-        <v-list-item
-          prepend-icon="mdi-calendar-alert"
-          title="Overdue"
-          value="shared"
-        ></v-list-item>
-      </v-list>
-
-      <template v-slot:append>
-        <v-list-item class="py-4 px-1.5" nav>
-          <template v-slot:prepend>
-            <v-btn
-              class="mr-2"
-              @click.stop="toggleTheme"
-              :icon="
-                darkMode ? 'mdi-moon-waning-crescent' : 'mdi-weather-sunny'
-              "
-              variant="tonal"
-              size="small"
-            />
-          </template>
-        </v-list-item>
-      </template>
-    </v-navigation-drawer>
-
-    <!-- Main Content -->
-    <v-main>
-      <v-container>
-        <router-view />
-      </v-container>
-    </v-main>
-  </v-app>
+    <v-layout>
+      <v-main>
+        <v-responsive
+          class="fill-height mx-auto"
+          min-height="100dvh"
+          max-width="900"
+        >
+          <nav v-if="$vuetify.display.mobile" class="d-flex justify-end pa-4">
+            <v-btn @click="handleOpenBar" size="small" icon="mdi-menu"></v-btn>
+          </nav>
+          <DeleteModal />
+          <EditModal />
+          <router-view />
+        </v-responsive>
+      </v-main>
+    </v-layout>
+  </v-card>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import { useTheme } from "vuetify";
+const openBar = ref(false);
 
-const drawer = ref(true);
-const rail = ref(false);
-
-const { global } = useTheme();
-
-console.log(global.name.value);
-const darkMode = ref(global.name.value === "dark");
-
-function toggleTheme() {
-  global.name.value = global.name.value === "dark" ? "light" : "dark";
-  darkMode.value = global.name.value === "dark";
-  localStorage.setItem("theme", global.name.value);
-}
+const handleOpenBar = () => {
+  openBar.value = !openBar.value;
+};
 </script>
 
 <style scoped></style>
