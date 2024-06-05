@@ -1,79 +1,78 @@
-# Vuetify (Default)
+ # Clover Tovue
 
-This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
+**[Visit Clover ToVue](https://clover-tovue.vercel.app/)**
 
-## ❗️ Important Links
+Clover Tovue is a todo list application built with Vite, Vue.js, and the Vuetify Vue Components Library. This application allows users to add, edit, search, filter, and sort todos. Additionally, it marks tasks/todos as important, due today, or overdue. The todo data is stored locally in LocalStorage.
 
-- 📄 [Docs](https://vuetifyjs.com/)
-- 🚨 [Issues](https://issues.vuetifyjs.com/)
-- 🏬 [Store](https://store.vuetifyjs.com/)
-- 🎮 [Playground](https://play.vuetifyjs.com/)
-- 💬 [Discord](https://community.vuetifyjs.com)
+![Clover ToVue Screenshot](https://github.com/BagasKelana/clover-tovue/blob/main/public/clover-tovue.png)
 
-## 💿 Install
+## Features
 
-Set up your project using your preferred package manager. Use the corresponding command to install the dependencies:
+- **Add Todo:** Add new todo items.
+- **Edit Todo:** Modify existing todo details.
+- **Delete Todo:** Remove todo items.
+- **Search Todo:** Search for todos based on keywords.
+- **Filter Todo:** Filter todos based on their status and category/place (important, today, overdue etc).
+- **Sort Todo:** Sort todos based on specific criteria (Name or Date).
+- **Local Storage:** Save todo data locally in the browser's LocalStorage.
 
-| Package Manager                                                | Command        |
-|---------------------------------------------------------------|----------------|
-| [yarn](https://yarnpkg.com/getting-started)                   | `yarn install` |
-| [npm](https://docs.npmjs.com/cli/v7/commands/npm-install)     | `npm install`  |
-| [pnpm](https://pnpm.io/installation)                          | `pnpm install` |
-| [bun](https://bun.sh/#getting-started)                        | `bun install`  |
+## Technologies Used
 
-After completing the installation, your environment is ready for Vuetify development.
+- **Frontend:** Vite, Vue.js, Vuetify
+- **State Management:** Pinia 
+- **Routing:** Vue Router
+- **Storage:** LocalStorage 
 
-## ✨ Features
+## Installation
 
-- 🖼️ **Optimized Front-End Stack**: Leverage the latest Vue 3 and Vuetify 3 for a modern, reactive UI development experience. [Vue 3](https://v3.vuejs.org/) | [Vuetify 3](https://vuetifyjs.com/en/)
-- 🗃️ **State Management**: Integrated with [Pinia](https://pinia.vuejs.org/), the intuitive, modular state management solution for Vue.
-- 🚦 **Routing and Layouts**: Utilizes Vue Router for SPA navigation and vite-plugin-vue-layouts for organizing Vue file layouts. [Vue Router](https://router.vuejs.org/) | [vite-plugin-vue-layouts](https://github.com/JohnCampionJr/vite-plugin-vue-layouts)
-- ⚡ **Next-Gen Tooling**: Powered by Vite, experience fast cold starts and instant HMR (Hot Module Replacement). [Vite](https://vitejs.dev/)
-- 🧩 **Automated Component Importing**: Streamline your workflow with unplugin-vue-components, automatically importing components as you use them. [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components)
+To run this project locally, follow these steps:
 
-These features are curated to provide a seamless development experience from setup to deployment, ensuring that your Vuetify application is both powerful and maintainable.
+## Installation
 
-## 💡 Usage
+To run this project locally, follow these steps:
 
-This section covers how to start the development server and build your project for production.
+1. Clone this repository to your local machine.
+    ```bash
+    git clone https://github.com/BagasKelana/clover-tovue.git
+    ```
+    
+2. Install dependencies using npm
 
-### Starting the Development Server
+   ```bash
+   npm install
+   ```
 
-To start the development server with hot-reload, run the following command. The server will be accessible at [http://localhost:3000](http://localhost:3000):
 
-```bash
-yarn dev
-```
+3. Run the development server.
+    ```bash
+    npm run dev
+    ```
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+4. Access the application by visiting `http://localhost:3000` in your web browser.
 
-> Add NODE_OPTIONS='--no-warnings' to suppress the JSON import warnings that happen as part of the Vuetify import mapping. If you are on Node [v21.3.0](https://nodejs.org/en/blog/release/v21.3.0) or higher, you can change this to NODE_OPTIONS='--disable-warning=5401'. If you don't mind the warning, you can remove this from your package.json dev script.
 
-### Building for Production
+## Personal Note
 
-To build your project for production, use:
+Dear HR Team at Wisatabook,
 
-```bash
-yarn build
-```
+This project marks my first experience with the Vue.js framework. I dedicated 5 days to learning and understanding Vue.js concepts, followed by 3 days to complete this project. I apologize for the delay in meeting the deadline and am truly grateful for the opportunity to participate in the Junior Software Engineer Technical Test.
 
-(Repeat for npm, pnpm, and bun with respective commands.)
+Thank you very much for considering my application.
 
-Once the build process is completed, your application will be ready for deployment in a production environment.
+Best regards,
 
-## 💪 Support Vuetify Development
+[M HILAL BAGAS KELANA]
 
-This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
 
-- [Requesting Enterprise Support](https://support.vuetifyjs.com/)
-- [Sponsoring John on Github](https://github.com/users/johnleider/sponsorship)
-- [Sponsoring Kael on Github](https://github.com/users/kaelwd/sponsorship)
-- [Supporting the team on Open Collective](https://opencollective.com/vuetify)
-- [Becoming a sponsor on Patreon](https://www.patreon.com/vuetify)
-- [Becoming a subscriber on Tidelift](https://tidelift.com/subscription/npm/vuetify)
-- [Making a one-time donation with Paypal](https://paypal.me/vuetify)
+## Contributing
 
-## 📑 License
-[MIT](http://opensource.org/licenses/MIT)
+Contributions are welcome! If you have any ideas for new features, find any bugs, or would like to contribute in any other way, please feel free to open an issue or submit a pull request.
 
-Copyright (c) 2016-present Vuetify, LLC
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Contact
+
+If you have any questions or suggestions, feel free to contact me.
+
