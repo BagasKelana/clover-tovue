@@ -55,7 +55,7 @@ To run this project locally, follow these steps:
 
 Dear HR Team at Wisatabook,
 
-This project marks my first experience with the Vue.js framework. I dedicated 5 days to learning and understanding Vue.js concepts, followed by 3 days to complete this project. I apologize for the delay in meeting the deadline and am truly grateful for the opportunity to participate in the Junior Software Engineer Technical Test.
+This project marks my first experience with the Vue.js framework. Although I typically work with React.js, I dedicated 5 days to learning and understanding Vue.js concepts, followed by 3 days to complete this project. I apologize for the delay in meeting the deadline and am truly grateful for the opportunity to participate in the Junior Software Engineer Technical Test.
 
 Thank you very much for considering my application.
 
