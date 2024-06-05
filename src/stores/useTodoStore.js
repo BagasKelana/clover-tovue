@@ -8,7 +8,6 @@ export const useTodoStore = defineStore("todo", () => {
   const loadTodos = () => {
     const storedTodos = localStorage.getItem("todos");
 
-    // check 
     const parseTodo = JSON.parse(storedTodos);
     if (parseTodo?.length && parseTodo?.length > 0) {
       todos.value = checkOverdueTodos(parseTodo);
@@ -34,7 +33,7 @@ export const useTodoStore = defineStore("todo", () => {
   const editTodo = (id, updatedTodo) => {
     const index = todos.value.findIndex((todo) => todo.id === id);
     if (index !== -1) {
-      todos.value[index] = { ...todos.value[index], ...updatedTodo };
+      todos.value[index] = updatedTodo;
       saveTodos();
     }
   };
