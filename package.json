@@ -11,8 +11,10 @@
     "@mdi/font": "7.0.96",
     "core-js": "^3.34.0",
     "roboto-fontface": "*",
+    "uuid": "^9.0.1",
+    "vee-validate": "^4.12.8",
     "vue": "^3.4.0",
-    "vuetify": "^3.5.0"
+    "vuetify": "^3.6.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
