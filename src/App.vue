@@ -7,7 +7,7 @@
         color="primary"
         icon="mdi-plus"
         large
-        href="/add"
+        to="/add"
       >
         <v-icon>mdi-plus</v-icon>
       </v-btn>
