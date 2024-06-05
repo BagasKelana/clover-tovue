@@ -2,7 +2,12 @@
   <div>
     <h1 class="text-display-1 pa-4">All Task</h1>
     <div class="mx-4 mt-4 mb-10 d-flex flex-column">
-      <v-text-field v-model="searchTodo" rounded variant="outlined">
+      <v-text-field
+        placeholder="Search task here..."
+        v-model="searchTodo"
+        rounded
+        variant="outlined"
+      >
         <v-icon class="mr-2" icon="mdi-magnify"></v-icon
       ></v-text-field>
 
