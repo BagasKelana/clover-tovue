@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-display-1 pa-4">Overdue Todo</h1>
+  <h1 class="text-display-1 pa-4">Overdue Task</h1>
   <TodoCard v-for="itam in overdueItems" v-bind="itam" :key="itam.id" />
 </template>
 

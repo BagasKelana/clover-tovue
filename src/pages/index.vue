@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-display-1 pa-4">All Todo</h1>
+    <h1 class="text-display-1 pa-4">All Task</h1>
     <div class="mx-4 mt-4 mb-10 d-flex flex-column">
       <v-text-field v-model="searchTodo" rounded variant="outlined">
         <v-icon class="mr-2" icon="mdi-magnify"></v-icon
@@ -44,7 +44,7 @@
                   ? true
                   : false
               "
-              active-color="primary"
+              color="primary"
             >
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item>
@@ -55,12 +55,23 @@
   </div>
 
   <template v-if="errorMessage">
-    <div>{{ errorMessage }}</div>
+    <div class="mx-4">{{ errorMessage }}</div>
   </template>
   <template v-else-if="searchFilterItems?.length">
     <TodoCard v-for="itam in searchFilterItems" v-bind="itam" :key="itam.id" />
   </template>
   <template v-else>
+    <div
+      class="d-flex flex-column justify-center align-center text-center mx-4"
+      v-if="!items?.length"
+    >
+      <h2>You don't have any tasks yet</h2>
+      <p>Click on the + button to add one</p>
+
+      <div>
+        <v-img :width="400" src="/no-task.png"> </v-img>
+      </div>
+    </div>
     <TodoCard v-for="itam in items" v-bind="itam" :key="itam.id" />
   </template>
 </template>

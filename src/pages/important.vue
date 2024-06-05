@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-display-1 pa-4">Important Todo</h1>
+  <h1 class="text-display-1 pa-4">Important Task</h1>
   <TodoCard v-for="itam in importantItems" v-bind="itam" :key="itam.id" />
 </template>
 

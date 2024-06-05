@@ -50,7 +50,6 @@
       </div>
 
       <v-spacer></v-spacer>
-      <!-- menu toggle (edit, delete, etc) -->
       <v-menu>
         <template v-slot:activator="{ props: menu }">
           <v-tooltip location="top center">
