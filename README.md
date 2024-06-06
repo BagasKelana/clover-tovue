@@ -27,10 +27,6 @@ Clover Tovue is a todo list application built with Vite, Vue.js, and the Vuetify
 
 To run this project locally, follow these steps:
 
-## Installation
-
-To run this project locally, follow these steps:
-
 1. Clone this repository to your local machine.
     ```bash
     git clone https://github.com/BagasKelana/clover-tovue.git
